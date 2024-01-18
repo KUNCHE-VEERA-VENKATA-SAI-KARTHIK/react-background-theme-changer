@@ -4,7 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 
 function App() {
-  const [color, setColor] = useState("white");
+  const [color, setColor] = useState("purple");
 
   function colorChange(c) {
     setColor(c);
@@ -14,33 +14,34 @@ function App() {
   return (
     <>
       <div
-        className="w-full h-screen flex align-bottom "
+        className="h-screen w-full  flex flex-wrap justify-center bottom-10 bg-purple-950"
         style={{ backgroundColor: color }}
       >
-        <h1 className="underline  flex  justify-center align-bottom ">hi</h1>
-        <div className="bg-white  flex flex-wrap   px-3 py-5  ">
+        <div className="bg-white rounded-full  self-end mx-5 my-5  flex  justify-center gap-5  flex-wrap bottom-10  ">
           <button
-            className="bg-red rounded-xl outline-dashed px-3 py-5"
+            className="outline-double h-10 rounded-full  w-15 mx-4 my-4 px-3 py-30 "
             onClick={() => {
               colorChange("red");
             }}
+            style={{ backgroundColor: "red" }}
           >
-            red{" "}
+            red
           </button>
           <button
-            className="bg-red rounded-xl   outline-dashed px-3 py-3 "
+            className="outline-double rounded-full h-10   w-15 mx-4 my-4 px-3 py-30 "
             onClick={() => {
               colorChange("blue");
             }}
+            style={{ backgroundColor: "blue" }}
           >
-            {" "}
-            blue{" "}
+            blue
           </button>
           <button
-            className="bg-red rounded-xl flex  outline-dashed px-3"
+            className="outline-double h-10 rounded-full   w-15 mx-4 my-4 px-3 py-30"
             onClick={() => {
               colorChange("green");
             }}
+            style={{ backgroundColor: "green" }}
           >
             green
           </button>
